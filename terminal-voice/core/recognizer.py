@@ -3,7 +3,7 @@ import json
 from vosk import Model, KaldiRecognizer
 
 class Recognizer:
-    def __init__(self, model_path="models/vosk-model-en-us-0.22"):
+    def __init__(self, model_path="models/vosk-model-small-en-us-0.15"):
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"Model not found at {model_path}.")
         self.recognizer = KaldiRecognizer(Model(model_path), 16000)
